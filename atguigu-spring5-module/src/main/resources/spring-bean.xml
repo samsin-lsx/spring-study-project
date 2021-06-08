@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--1、演示bean对象创建实例-->
+    <bean id="user" class="com.atguigu.spring5.bean.User"></bean>
+    <!--2、演示bean创建生命周期-->
+    <bean id="orders" class="com.atguigu.spring5.bean.Orders" init-method="initMethod" destroy-method="destroyMethod">
+        <property name="oname" value="小米手机"></property>
+    </bean>
+    <!--配置后置处理器实现类-->
+    <bean id="myBeanPostProcesser" class="com.atguigu.spring5.bean.MyBeanPostProcesser"></bean>
+</beans>
